@@ -273,7 +273,7 @@
 			<groupId>opensymphony</groupId>
 			<artifactId>oscache</artifactId>
 			<version>${osCache-version}</version>
-			<exclusions>
+			<exclusions>   <!-- 解除对jms的依赖 -->
 				<exclusion>
 					<artifactId>jms</artifactId>
 					<groupId>javax.jms</groupId>
