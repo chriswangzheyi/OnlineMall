@@ -35,7 +35,7 @@
 		<pager-taglib-version>2.0</pager-taglib-version> <!-- pager-taglib 版本 -->
 		<jxl-version>2.6.12</jxl-version> <!-- jxl 版本 -->
 		<jms1.1-version>1.1.1</jms1.1-version>  <!-- jms1.1 版本 -->
-		<osCache-version>2.4.1</osCache-version>  <!-- jms1.1 版本 -->
+		<osCache-version>2.4.1</osCache-version>  <!-- oscache 版本 -->
 
 
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
