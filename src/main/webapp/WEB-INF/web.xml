@@ -40,7 +40,7 @@
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>front</servlet-name>
-		<url-pattern>/</url-pattern>
+		<url-pattern>*.shtml</url-pattern>
 	</servlet-mapping>
 	
 	<!-- 过滤器 过滤乱码 -->
@@ -61,13 +61,4 @@
     	<url-pattern>/*</url-pattern>
   	</filter-mapping>
   	
-  <!-- 前端登录用拦截器 -->
-  <filter>
-  	<filter-name>FrontLoginFilter</filter-name>
-  	<filter-class>cn.liu.utils.FrontLoginFilter</filter-class>
-  </filter>
-  <filter-mapping>
-  	<filter-name>FrontLoginFilter</filter-name>
-  	<url-pattern>/</url-pattern>
-  </filter-mapping>
 </web-app>	

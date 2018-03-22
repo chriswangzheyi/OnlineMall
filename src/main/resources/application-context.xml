@@ -11,7 +11,7 @@
      http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-3.0.xsd">
 
 	<!-- 引入对应目录下xml文件 -->
-	<import resource="config/*.xml" />
+	<import resource="classpath:config/*.xml" />
 	
 	
 </beans>
