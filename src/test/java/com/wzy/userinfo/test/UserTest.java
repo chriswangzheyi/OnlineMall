@@ -24,6 +24,7 @@ public class UserTest {
 	public void testAdd() {
 		UserInfo user = new UserInfo();
 		
+		user.setUserName("汪哲逸");
 
 		service.addUser(user);
 	
