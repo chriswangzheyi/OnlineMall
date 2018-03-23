@@ -1,5 +1,5 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.wzy</groupId>
 	<artifactId>OnlineMall</artifactId>
@@ -187,7 +187,6 @@
 			<groupId>javax.servlet</groupId>
 			<artifactId>jstl</artifactId>
 			<version>${jstl-version}</version>
-			<scope>provided</scope>
 		</dependency>
 
 		<!-- servlet相关 -->
@@ -260,61 +259,61 @@
 			<artifactId>jxl</artifactId>
 			<version>${jxl-version}</version>
 		</dependency>
-		
-		
+
+
 		<dependency>
-    <groupId>com.alibaba</groupId>
-    <artifactId>druid</artifactId>
-    <version>${druid-version}</version>
-</dependency>
-		
-		
+			<groupId>com.alibaba</groupId>
+			<artifactId>druid</artifactId>
+			<version>${druid-version}</version>
+		</dependency>
+
+
 		<!-- oscache 提供JSP页面的快速缓存 -->
- 		<dependency>
+<!-- 		<dependency>
 			<groupId>opensymphony</groupId>
 			<artifactId>oscache</artifactId>
 			<version>${osCache-version}</version>
-			<exclusions>   <!-- 解除对jms的依赖 -->
+			<exclusions>   解除对jms的依赖
 				<exclusion>
 					<artifactId>jms</artifactId>
 					<groupId>javax.jms</groupId>
 				</exclusion>
 			</exclusions>
-		</dependency> 
+		</dependency> -->
 
 
 	</dependencies>
-    <build>
-        <pluginManagement>
-            <plugins>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-compiler-plugin</artifactId>
-                    <version>3.6.1</version>
-                    <configuration>
-                        <source>${java-version}</source>
-                        <target>${java-version}</target>
-                        <encoding>${project.build.sourceEncoding}</encoding>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.maven.plugins</groupId>
-                    <artifactId>maven-surefire-plugin</artifactId>
-                    <configuration>
-                        <skip>true</skip>
-                    </configuration>
-                </plugin>
-                <plugin>
-                    <groupId>org.apache.tomcat.maven</groupId>
-                    <artifactId>tomcat7-maven-plugin</artifactId>
-                    <version>2.2</version>
-                    <configuration>
-                        <port>${tomcat.plugin.port}</port>
-                        <path>/</path>
-                        <uriEncoding>UTF-8</uriEncoding>
-                    </configuration>
-                </plugin>
-            </plugins>
-        </pluginManagement>
-    </build>
+	<build>
+		<pluginManagement>
+			<plugins>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-compiler-plugin</artifactId>
+					<version>3.6.1</version>
+					<configuration>
+						<source>${java-version}</source>
+						<target>${java-version}</target>
+						<encoding>${project.build.sourceEncoding}</encoding>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.maven.plugins</groupId>
+					<artifactId>maven-surefire-plugin</artifactId>
+					<configuration>
+						<skip>true</skip>
+					</configuration>
+				</plugin>
+				<plugin>
+					<groupId>org.apache.tomcat.maven</groupId>
+					<artifactId>tomcat7-maven-plugin</artifactId>
+					<version>2.2</version>
+					<configuration>
+						<port>${tomcat.plugin.port}</port>
+						<path>/</path>   <!-- 请求路径 -->
+						<uriEncoding>UTF-8</uriEncoding>
+					</configuration>
+				</plugin>
+			</plugins>
+		</pluginManagement>
+	</build>
 </project>
