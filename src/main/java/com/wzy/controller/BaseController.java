@@ -2,6 +2,13 @@ package com.wzy.controller;
 
 import javax.servlet.http.HttpServletRequest;
 
+
+
+/**
+ * @author 汪哲逸
+ * 分页用controller
+ *
+ */
 public class BaseController {
 	/**
 	 * 起始记录数
@@ -23,7 +30,7 @@ public class BaseController {
 	 * 初始化分页信息
 	 */
 	public void initPage(HttpServletRequest request){
-		String page_str = request.getParameter("pager.offset");
+		String page_str = request.getParameter("pager.offset"); //从分页插件获取的内容
 		if(page_str!=null && !page_str.equals("")){
 			pageNo = Integer.parseInt(page_str);
 		}

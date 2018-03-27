@@ -39,6 +39,7 @@ data-validator-option="{theme:'yellow_top',stopOnError:true}"
 				<div class="form-group ">
 					<label class="col-xs-3 control-label">用户姓名</label>
 					<div class="col-xs-9 ">
+						<!-- 使用nice validator. data-rule用来控制form validator -->
 						<input type="text" name="userName" data-rule="用户姓名:required;" class="form-control" placeholder="请输入用户姓名" />
 					</div>
 				</div>
@@ -87,6 +88,7 @@ data-validator-option="{theme:'yellow_top',stopOnError:true}"
 				<div class="form-group ">
 					<label class="col-xs-3 control-label">手机号码</label>
 					<div class="col-xs-9">
+					<!-- data-rule用来控制form validator -->
 						<input type="text" class="form-control" id="userPhone" data-rule="手机号码:required;" name="userPhone" placeholder="请输入手机号码" />
 					</div>
 				</div>

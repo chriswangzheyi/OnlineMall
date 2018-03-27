@@ -71,7 +71,7 @@
 
 							<li class="divider"></li>
 
-							<li><a href="/back/home"> <i class="icon-off"></i> 退出
+							<li><a href="/OnlineMall/back/home"> <i class="icon-off"></i> 退出
 							</a></li>
 						</ul></li>
 				</ul>

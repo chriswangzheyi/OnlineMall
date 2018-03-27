@@ -51,8 +51,8 @@ public class UserTest {
 	public void testlist(){
 		
 		UserInfo user = new UserInfo();
-		user.setUserName("秋");
-		user.setUserType("");
+		//user.setUserName("张");
+		//user.setUserType("普通用户");
 		List<UserInfo> list = service.getList(user);
 		
 		for(UserInfo u:list){

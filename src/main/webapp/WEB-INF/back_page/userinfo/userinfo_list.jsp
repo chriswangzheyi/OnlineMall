@@ -26,14 +26,14 @@
 			<li>用户查询</li>
 		</ul>
 	</div>
-	<form action="user/list.do" class="form-inline" method="post">
+	<form action="user/list" class="form-inline" method="post">
 		<div class="row alert alert-info" style="margin: 0px; padding: 5px;">
 			<div class="form-group">
 				<label>姓名:</label> <input type="text" name="userName"
 					class="form-control" placeholder="请输入姓名" />
 			</div>
 			<input type="submit" class="btn btn-danger" value="查询"> <a
-				href="user/loadadd.do" class="btn btn-success">添加用户</a>
+				href="user/loadadd" class="btn btn-success">添加用户</a>
 		 <input type="button" value="导入用户信息"  class="btn btn-primary" data-toggle="modal" data-target="#myModal"/> 
 		</div>
 
@@ -56,7 +56,7 @@
 						<td>${user.userPhone }</td>
 						<td>${user.userPw }</td>
 						<td>${user.userType }</td>
-						<td><a href="user/loadupdate.do?userId=${user.userId }">修改</a> 
+						<td><a href="user/loadupdate?userId=${user.userId }">修改</a> 
 						<a href="javascript:void(0)" onclick="del('${user.userId}')">删除</a>
 						
 						</td>
@@ -65,16 +65,14 @@
 
 			</table>
 			<div align="right" style="padding: 10px;">
-				<pg:pager items="${total }" url="user/list.do" maxIndexPages="3"
+				<pg:pager items="${total}" url="user/list" maxIndexPages="3"
 					export="currentPageNumber=pageNumber" scope="request">
-					<%-- <pg:param name="userName" value="${userName }" /> --%>
-
 					<jsp:include page="../../../res/jsp/pager_tag.jsp" flush="true" />
 				</pg:pager>
 			</div>
 		</div>
 	</form>
-	<form action="user/imuser.do" method="post" enctype="multipart/form-data">
+	<form action="user/imuser" method="post" enctype="multipart/form-data">
 <!-- 导入EXCELdiv  开始-->
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
   <div class="modal-dialog">
@@ -98,7 +96,7 @@
 	<script type="text/javascript">
 		function del(userId){
 			if(confirm("您确定删除吗")){
-				window.location="user/delete.do?userId="+userId;
+				window.location="user/delete?userId="+userId;
 			}
 			
 			

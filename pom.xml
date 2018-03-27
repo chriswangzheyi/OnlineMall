@@ -246,7 +246,8 @@
 			<version>${jersey-version}</version>
 		</dependency>
 
-		<!-- pager-taglib 分页框架 -->
+		<!-- pager-taglib 分页框架   -->
+		<!-- <  引用方法：  %@ taglib prefix="pg" uri="http://jsptags.com/tags/navigation/pager"%> -->
 		<dependency>
 			<groupId>jsptags</groupId>
 			<artifactId>pager-taglib</artifactId>
@@ -315,5 +316,27 @@
 				</plugin>
 			</plugins>
 		</pluginManagement>
+		
+		<!-- 如果不添加此节点mybatis的mapper.xml文件都会被漏掉。 -->  
+        <resources>  
+            <resource>  
+                <directory>src/main/java</directory>  
+                <includes>  
+                    <include>**/*.properties</include>  
+                    <include>**/*.xml</include>  
+                </includes>  
+                <filtering>false</filtering>  
+            </resource>  
+            <resource>  
+                <directory>src/main/resources</directory>  
+                <includes>  
+                    <include>**/*.properties</include>  
+                    <include>**/*.xml</include>  
+                </includes>  
+                <filtering>false</filtering>  
+            </resource>  
+        </resources> 
+		
+		
 	</build>
 </project>

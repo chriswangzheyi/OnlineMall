@@ -72,6 +72,7 @@ public class UserInfoController extends BaseController{
 	
 		List<UserInfo> list = userserivce.getList(user);
 		
+		//表单内容
 		model.addAttribute("list", list);
 		//总记录数
 		model.addAttribute("total", userserivce.getcount(user));
