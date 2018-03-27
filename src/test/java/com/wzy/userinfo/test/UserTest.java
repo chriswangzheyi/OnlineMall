@@ -51,7 +51,7 @@ public class UserTest {
 	public void testlist(){
 		
 		UserInfo user = new UserInfo();
-		//user.setUserName("秋");
+		user.setUserName("秋");
 		user.setUserType("");
 		List<UserInfo> list = service.getList(user);
 		

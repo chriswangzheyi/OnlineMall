@@ -27,17 +27,19 @@ public class UserInfoController extends BaseController{
 	private UserInfoService userserivce;
 	
 	
+	//后端主页面
 	@RequestMapping("back/login")
 	public String login(){
 		return "main/index";
 	}
+	
 	
 	@RequestMapping("back/bootm")
 	public String bootm(){
 		return "main/bootm";
 	}
 	
-	
+	//后端登录页面
 	@RequestMapping("back/home")
 	public String backhome(){
 		return "main/login_back";
